@@ -1,0 +1,21 @@
+<div class="dashboard-header">
+  <h3 class="title">Top Heroes</h3>
+</div>
+<div class="dashboard-content">
+  <div class="columns is-multiline is-centered cards-container">
+    <div class="column" *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
+      <article class="message is-info">
+        <div class="message-header">
+          <p>{{hero.id}}</p>
+        </div>
+        <div class="message-body">
+          <div class="board-item">
+            <div class="board-item-content">
+              <span>{{hero.name}}</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>

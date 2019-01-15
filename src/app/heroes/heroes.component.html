@@ -1,0 +1,27 @@
+<div class="all-heroes">
+  <div class="heroes-header">
+    <h2 class="title">All Heroes</h2>
+    <a class="hero-add-icon fa fa-1x fa-plus is-pulled-right" (click)="displayAddHero()"></a>
+  </div>
+  <div class="heroes-content">
+    <div *ngIf="isDisplayAddHero">
+      <div id="add-hero">
+        <div class="field">
+          <div class="control">
+            <input #heroName class="input is-info" placeholder="hero name" />
+          </div>
+        </div>
+        <button class="button is-block is-primary is-fullwidth" (click)="add(heroName.value); heroName.value=''">add</button>
+      </div>
+    </div>
+    <ul class="heroes">
+      <li *ngFor="let hero of heroes">
+        <div class="tags has-addons are-large hero-list">
+          <a class="tag is-dark is-large" routerLink="/detail/{{hero.id}}">{{ hero.id}}</a>
+          <a class="tag is-info is-large hero-name" routerLink="/detail/{{hero.id}}">{{ hero.name }}</a>
+          <a class="tag is-danger is-large fa fa-trash" (click)="delete(hero)"></a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

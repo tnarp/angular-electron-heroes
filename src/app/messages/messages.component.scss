@@ -1,0 +1,71 @@
+.console {
+  margin-top: 20px;
+  color: #fff;
+}
+
+.console-header {
+  overflow: hidden;
+  background-color: #d5d5d5;
+  padding: 8px 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.console-content {
+  background-color: #1e1e1e;
+  padding: 30px 17px 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.console-dot {
+  float: left;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 7px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+}
+
+.console-dot-red {
+  background-color: #ff6057;
+}
+
+.console-dot-red-icon {
+  opacity: 0;
+}
+.console-dot-red:hover .console-dot-red-icon {
+  float: left;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 7px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+  color: #ff6057;
+  background-color: #d5d5d5;
+  opacity: 1;
+}
+
+.console-dot-yellow {
+  background-color: #ffc22e;
+}
+
+.console-dot-green {
+  background-color: #28ca40;
+}
+
+.console__prompt {
+  display: block;
+  margin-bottom: 15px;
+  font-family: "Source Code Pro",monospace;
+  font-size: 15px;
+}
+
+.console__prompt::before {
+  content: "#";
+  padding-right: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

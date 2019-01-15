@@ -1,0 +1,27 @@
+<div *ngIf="hero" id="hero-detail">
+  <div class="hero-detail-header">
+    <h2 class="title">{{ hero.name | uppercase }} Detail</h2>
+  </div>
+  <div class="hero-detail-body">
+    <div class="field">
+      <label class="label" for="id">Id:</label>
+      <div class="control">
+          <input class="input" type="text" id="id" value="{{hero.id}}" disabled>
+      </div>
+    </div>
+    <div class="field">
+      <label class="label" for="name">Name:</label>
+      <div class="control is-expanded">
+        <input class="input" type="text" id="name" [(ngModel)]="hero.name" placeholder="name">
+      </div>
+    </div>
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-info" (click)="goBack()">Back</button>
+      </div>
+      <div class="control">
+        <button class="button is-primary" (click)="save()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<nav class="navbar is-black">
+  <div class="navbar-start">
+    <span class="navbar-item">
+      <a class="button is-white is-outlined" routerLink="/dashboard">
+        <span class="icon">
+          <i class="fa fa-bars"></i>
+        </span>
+        <span>
+          Dashboard
+        </span>
+      </a>
+    </span>
+    <span class="navbar-item">
+      <a class="button is-white is-outlined" routerLink="/heroes">
+        <span class="icon">
+          <i class="fa fa-user"></i>
+        </span>
+        <span>
+          Heroes
+        </span>
+      </a>
+    </span>
+    <span class="navbar-item">
+      <a class="button is-white is-outlined" routerLink="/message">
+        <span class="icon">
+          <i class="fa fa-pencil"></i>
+        </span>
+        <span>
+          Message
+        </span>
+      </a>
+    </span>
+  </div>
+  <div class="navbar-end">
+    <span class="navbar-item">
+      <a class="button is-white is-outlined" routerLink="/search">
+        <span class="icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <span>
+          Search
+        </span>
+      </a>
+    </span>
+  </div>
+</nav>
+<div class="body">
+    <router-outlet></router-outlet>
+</div>
+

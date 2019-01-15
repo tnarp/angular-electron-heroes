@@ -1,0 +1,17 @@
+<div>
+  <h3 class="title has-text-centered">Message</h3>
+</div>
+<div class="console">
+  <div class="console-header">
+    <div class="console-dot console-dot-red" (click)="messageService.clear()">
+      <div class="console-dot-red-icon fa fa-times-circle"></div>
+    </div>
+    <div class="console-dot console-dot-yellow"></div>
+    <div class="console-dot console-dot-green"></div>
+  </div>
+  <div class="console-content">
+    <div *ngFor="let message of messageService.messages">
+      <kbd class="console__prompt">{{message}}</kbd>
+    </div>
+  </div>
+</div>
